@@ -51,68 +51,68 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: SingleChildScrollView(
           child: Column(
-            children: [
-              selectedImages.isEmpty
-                  ? GestureDetector(
-                      onTap: showOptions,
-                      child: Container(
-                        height: MediaQuery.of(context).size.width,
-                        width: MediaQuery.of(context).size.width,
-                        margin:  EdgeInsets.symmetric(horizontal: 10),
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(8)),
-                        child:  Icon(Icons.add_a_photo),
-                      ),
-                    )
-                  : Container(
-                      height: MediaQuery.of(context).size.width,
-                      width: MediaQuery.of(context).size.width,
-                      margin:  EdgeInsets.symmetric(horizontal: 10),
-                      decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.3),
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              image: FileImage(selectedImages[0]),
-                              fit: BoxFit.cover)),
-                    ),
-               SizedBox(height: 10),
-              Container(
-                height: MediaQuery.of(context).size.width / 2,
-                alignment: Alignment.centerLeft,
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: selectedImages.length,
-                    itemBuilder: (context, index) {
-                      return selectedImages.length - 1 > index
-                          ? Container(
-                              height: MediaQuery.of(context).size.width / 2,
-                              width: MediaQuery.of(context).size.width / 2,
-                              margin: const EdgeInsets.symmetric(horizontal: 10),
-                              decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.3),
-                                  borderRadius: BorderRadius.circular(8),
-                                  image: DecorationImage(
-                                      image: FileImage(selectedImages[index + 1]),
-                                      fit: BoxFit.cover)),
-                            )
-                          : GestureDetector(
-                              onTap: showOptions,
-                              child: Container(
-                                height: MediaQuery.of(context).size.width / 2,
-                                width: MediaQuery.of(context).size.width / 2,
-                                margin: const EdgeInsets.symmetric(horizontal: 10),
-                                decoration: BoxDecoration(
-                                    color: Colors.grey.withOpacity(0.3),
-                                    borderRadius: BorderRadius.circular(8)),
-                                child: const Icon(Icons.add_a_photo),
-                              ),
-                            );
-                    }),
-              ),
-            ],
-          )),
+        children: [
+          selectedImages.isEmpty
+              ? GestureDetector(
+                  onTap: showOptions,
+                  child: Container(
+                    height: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width,
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                        color: Colors.grey.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Icon(Icons.add_a_photo),
+                  ),
+                )
+              : Container(
+                  height: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(8),
+                      image: DecorationImage(
+                          image: FileImage(selectedImages[0]),
+                          fit: BoxFit.cover)),
+                ),
+          const SizedBox(height: 10),
+          Container(
+            height: MediaQuery.of(context).size.width / 2,
+            alignment: Alignment.centerLeft,
+            child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: selectedImages.length,
+                itemBuilder: (context, index) {
+                  return selectedImages.length - 1 > index
+                      ? Container(
+                          height: MediaQuery.of(context).size.width / 2,
+                          width: MediaQuery.of(context).size.width / 2,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.3),
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(
+                                  image: FileImage(selectedImages[index + 1]),
+                                  fit: BoxFit.cover)),
+                        )
+                      : GestureDetector(
+                          onTap: showOptions,
+                          child: Container(
+                            height: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width / 2,
+                            margin: const EdgeInsets.symmetric(horizontal: 10),
+                            decoration: BoxDecoration(
+                                color: Colors.grey.withOpacity(0.3),
+                                borderRadius: BorderRadius.circular(8)),
+                            child: const Icon(Icons.add_a_photo),
+                          ),
+                        );
+                }),
+          ),
+        ],
+      )),
     );
   }
 
