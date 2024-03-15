@@ -58,17 +58,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                         height: MediaQuery.of(context).size.width,
                         width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        margin:  EdgeInsets.symmetric(horizontal: 10),
                         decoration: BoxDecoration(
                             color: Colors.grey.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(8)),
-                        child: const Icon(Icons.add_a_photo),
+                        child:  Icon(Icons.add_a_photo),
                       ),
                     )
                   : Container(
                       height: MediaQuery.of(context).size.width,
                       width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
+                      margin:  EdgeInsets.symmetric(horizontal: 10),
                       decoration: BoxDecoration(
                           color: Colors.grey.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(8),
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               image: FileImage(selectedImages[0]),
                               fit: BoxFit.cover)),
                     ),
-              const SizedBox(height: 10),
+               SizedBox(height: 10),
               Container(
                 height: MediaQuery.of(context).size.width / 2,
                 alignment: Alignment.centerLeft,
