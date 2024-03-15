@@ -58,17 +58,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                         height: MediaQuery.of(context).size.width,
                         width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
                         decoration: BoxDecoration(
                             color: Colors.grey.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(8)),
-                        child: Icon(Icons.add_a_photo),
+                        child: const Icon(Icons.add_a_photo),
                       ),
                     )
                   : Container(
                       height: MediaQuery.of(context).size.width,
                       width: MediaQuery.of(context).size.width,
-                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      margin: const EdgeInsets.symmetric(horizontal: 10),
                       decoration: BoxDecoration(
                           color: Colors.grey.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(8),
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               image: FileImage(selectedImages[0]),
                               fit: BoxFit.cover)),
                     ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: MediaQuery.of(context).size.width / 2,
                 alignment: Alignment.centerLeft,
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ? Container(
                               height: MediaQuery.of(context).size.width / 2,
                               width: MediaQuery.of(context).size.width / 2,
-                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              margin: const EdgeInsets.symmetric(horizontal: 10),
                               decoration: BoxDecoration(
                                   color: Colors.grey.withOpacity(0.3),
                                   borderRadius: BorderRadius.circular(8),
@@ -102,11 +102,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Container(
                                 height: MediaQuery.of(context).size.width / 2,
                                 width: MediaQuery.of(context).size.width / 2,
-                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                margin: const EdgeInsets.symmetric(horizontal: 10),
                                 decoration: BoxDecoration(
                                     color: Colors.grey.withOpacity(0.3),
                                     borderRadius: BorderRadius.circular(8)),
-                                child: Icon(Icons.add_a_photo),
+                                child: const Icon(Icons.add_a_photo),
                               ),
                             );
                     }),
