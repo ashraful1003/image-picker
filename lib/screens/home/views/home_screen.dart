@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context) => CupertinoActionSheet(
         actions: [
           CupertinoActionSheetAction(
-            child: Text('Photo Gallery'),
+            child: const Text('Photo Gallery'),
             onPressed: () {
               // close the options modal
               Navigator.of(context).pop();
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Post Commercial Offer'),
+        title: const Text('Post Commercial Offer'),
       ),
       body: SingleChildScrollView(
           child: Column(
